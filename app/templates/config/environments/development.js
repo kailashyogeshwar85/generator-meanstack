@@ -23,6 +23,7 @@ module.exports = function (app) {
         });
 
         app.use(app.router);
+        app.use(express.static(path.join(app.directory, 'app')));
         app.use(express.errorHandler());
     });
 };
